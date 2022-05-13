@@ -14,6 +14,7 @@ using WebAgent.Utils;
 
 namespace WebAgent
 {
+    //Start the project
     public class Startup
     {
         public Startup(IConfiguration configuration)
