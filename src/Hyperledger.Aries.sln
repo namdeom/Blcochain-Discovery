@@ -1,7 +1,7 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
-# Visual Studio Version 16
-VisualStudioVersion = 16.0.29509.3
+# Visual Studio Version 17
+VisualStudioVersion = 17.1.32421.90
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Tests", "Tests", "{02ADBA96-A50C-44F0-A9D9-FA0629AA2DF4}"
 EndProject
@@ -26,6 +26,8 @@ EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Hyperledger.Aries.Routing.Edge", "Hyperledger.Aries.Routing.Edge\Hyperledger.Aries.Routing.Edge.csproj", "{B76E800A-C3C1-4E42-AC60-24F70AF304BE}"
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Hyperledger.Aries.AspNetCore.Contracts", "Hyperledger.Aries.AspNetCore.Contracts\Hyperledger.Aries.AspNetCore.Contracts.csproj", "{C35CAB46-4192-4BED-BB1A-0956B5136E96}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "indy-sdk", "indy-sdk\indy-sdk.csproj", "{DC85D263-F8F0-4A96-8AE0-DE76A5B9167F}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -69,6 +71,10 @@ Global
 		{C35CAB46-4192-4BED-BB1A-0956B5136E96}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{C35CAB46-4192-4BED-BB1A-0956B5136E96}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{C35CAB46-4192-4BED-BB1A-0956B5136E96}.Release|Any CPU.Build.0 = Release|Any CPU
+		{DC85D263-F8F0-4A96-8AE0-DE76A5B9167F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{DC85D263-F8F0-4A96-8AE0-DE76A5B9167F}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{DC85D263-F8F0-4A96-8AE0-DE76A5B9167F}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{DC85D263-F8F0-4A96-8AE0-DE76A5B9167F}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -83,6 +89,7 @@ Global
 		{D963131D-96EC-4DF5-8147-D77E75DCAE67} = {50CA144B-F3EE-4FFC-B07C-C0E5959DAA82}
 		{B76E800A-C3C1-4E42-AC60-24F70AF304BE} = {50CA144B-F3EE-4FFC-B07C-C0E5959DAA82}
 		{C35CAB46-4192-4BED-BB1A-0956B5136E96} = {73FF6DBD-5847-4F2D-94BE-196AE9A80228}
+		{DC85D263-F8F0-4A96-8AE0-DE76A5B9167F} = {73FF6DBD-5847-4F2D-94BE-196AE9A80228}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {4FFA80F9-ADC6-40DB-BBD1-A522B8A68560}

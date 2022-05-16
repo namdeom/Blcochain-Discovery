@@ -27,7 +27,7 @@ namespace Hyperledger.Aries.Tests
             // Step 4. Activate the configuration
             LogManager.Configuration = config;
 
-            Hyperledger.Indy.Utils.Logger.Init();
+            //Hyperledger.Indy.Utils.Logger.Init();
         }
     }
 }

@@ -13,10 +13,12 @@
         <PackageReference Include="System.Text.Json" Version="$(SystemTextJsonVersion)" />
 
         <PackageReference Include="Flurl" Version="$(FlurlVersion)" />
-        <PackageReference Include="Hyperledger.Indy.Sdk" Version="$(HyperledgerIndySdkVersion)" />
         <PackageReference Include="Newtonsoft.Json" Version="$(NewtonsoftJsonVersion)" />
         <PackageReference Include="Polly" Version="$(PollyVersion)" />
         <PackageReference Include="Stateless" Version="$(StatelessVersion)" />
         <PackageReference Include="Multiformats.Base" Version="2.0.2" />
+    </ItemGroup>
+    <ItemGroup>
+      <ProjectReference Include="..\indy-sdk\indy-sdk.csproj" />
     </ItemGroup>
 </Project>

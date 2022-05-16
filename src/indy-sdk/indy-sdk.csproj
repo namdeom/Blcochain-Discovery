@@ -1,0 +1,13 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>netcoreapp3.1</TargetFramework>
+    <RootNamespace>Hyperledger.Indy</RootNamespace>
+    <AssemblyName>Hyperledger.Indy</AssemblyName>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <Compile Remove="Utils\Logger.cs" />
+  </ItemGroup>
+
+</Project>
