@@ -30,9 +30,9 @@ steps:
 
 - task: CopyFiles@2
   inputs:
-    SourceFolder: 'Files\IndyLib'
+    SourceFolder: 'samples\aspnetcore\Files\IndyLib'
     Contents: '**'
-    TargetFolder: 'bin\Release'
+    TargetFolder: 'samples\aspnetcore\bin\Release'
     
 - task: VSTest@2
   inputs:
