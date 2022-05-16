@@ -28,6 +28,12 @@ steps:
     platform: '$(buildPlatform)'
     configuration: '$(buildConfiguration)'
 
+- task: CopyFiles@2
+  inputs:
+    SourceFolder: 'Files\IndyLib'
+    Contents: '**'
+    TargetFolder: 'bin\Release'
+    
 - task: VSTest@2
   inputs:
     platform: '$(buildPlatform)'
@@ -40,4 +46,4 @@ steps:
     azureSubscription: 'Visual Studio Enterprise Subscription(e60ccc4c-cae4-41a1-b977-c1eda664c132)'
     appType: 'webApp'
     WebAppName: 'blockchain-DID-Issuer'
-    packageForLinux: '$(System.DefaultWorkingDirectory)/**/*.zip'
+    packageForLinux: '$(System.DefaultWorkingDirectory)/**/*.*'
