@@ -40,10 +40,3 @@ steps:
     configuration: '$(buildConfiguration)'
     
   
-- task: AzureRmWebAppDeployment@4
-  inputs:
-    ConnectionType: 'AzureRM'
-    azureSubscription: 'Visual Studio Enterprise Subscription(e60ccc4c-cae4-41a1-b977-c1eda664c132)'
-    appType: 'webApp'
-    WebAppName: 'blockchain-DID-Issuer'
-    packageForLinux: '$(System.DefaultWorkingDirectory)/**/*.*'
