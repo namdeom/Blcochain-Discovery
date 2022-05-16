@@ -70,19 +70,19 @@
   </ItemGroup>
 
   <ItemGroup>
-    <EmbeddedResource Include="Files\IndyLib\indy.dll">
+    <EmbeddedResource Include="Files\lib\indy.dll">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </EmbeddedResource>
-    <EmbeddedResource Include="Files\IndyLib\libeay32md.dll">
+    <EmbeddedResource Include="Files\lib\libeay32md.dll">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </EmbeddedResource>
-    <EmbeddedResource Include="Files\IndyLib\libsodium.dll">
+    <EmbeddedResource Include="Files\lib\libsodium.dll">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </EmbeddedResource>
-    <EmbeddedResource Include="Files\IndyLib\libzmq.dll">
+    <EmbeddedResource Include="Files\lib\libzmq.dll">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </EmbeddedResource>
-    <EmbeddedResource Include="Files\IndyLib\ssleay32md.dll">
+    <EmbeddedResource Include="Files\lib\ssleay32md.dll">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </EmbeddedResource>
   </ItemGroup>
@@ -100,5 +100,9 @@
     <ProjectReference Include="..\..\src\Hyperledger.Aries\Hyperledger.Aries.csproj">
       <GlobalPropertiesToRemove></GlobalPropertiesToRemove>
     </ProjectReference>
+  </ItemGroup>
+
+  <ItemGroup>
+    <Folder Include="Files\IndyLib\" />
   </ItemGroup>
 </Project>
