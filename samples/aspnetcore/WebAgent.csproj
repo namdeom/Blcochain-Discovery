@@ -3,59 +3,17 @@
   <PropertyGroup>
     <TargetFramework>netcoreapp3.1</TargetFramework>
     <PublishWithAspNetCoreTargetManifest>false</PublishWithAspNetCoreTargetManifest>
+    <DockerComposeProjectPath>docker-compose.dcproj</DockerComposeProjectPath>
+    <DockerDefaultTargetOS>Windows</DockerDefaultTargetOS>
+    <DockerfileContext>.</DockerfileContext>
   </PropertyGroup>
 
   <ItemGroup>
-    <None Remove="Files\indy.dll" />
-    <None Remove="Files\libeay32md.dll" />
-    <None Remove="Files\libsodium.dll" />
-    <None Remove="Files\libzmq.dll" />
-    <None Remove="Files\ssleay32md.dll" />
-  </ItemGroup>
-
-  <ItemGroup>
-    <Content Include="Files\css\site.css" />
-    <Content Include="Files\css\site.min.css" />
-    <Content Include="Files\favicon.ico" />
-    <Content Include="Files\images\banner1.svg" />
-    <Content Include="Files\images\banner2.svg" />
-    <Content Include="Files\images\banner3.svg" />
-    <Content Include="Files\images\banner4.svg" />
-    <Content Include="Files\images\profile.png" />
-    <Content Include="Files\js\site.js" />
-    <Content Include="Files\js\site.min.js" />
-    <Content Include="Files\lib\bootstrap\dist\css\bootstrap-grid.css" />
-    <Content Include="Files\lib\bootstrap\dist\css\bootstrap-grid.css.map" />
-    <Content Include="Files\lib\bootstrap\dist\css\bootstrap-grid.min.css" />
-    <Content Include="Files\lib\bootstrap\dist\css\bootstrap-grid.min.css.map" />
-    <Content Include="Files\lib\bootstrap\dist\css\bootstrap-reboot.css" />
-    <Content Include="Files\lib\bootstrap\dist\css\bootstrap-reboot.css.map" />
-    <Content Include="Files\lib\bootstrap\dist\css\bootstrap-reboot.min.css" />
-    <Content Include="Files\lib\bootstrap\dist\css\bootstrap-reboot.min.css.map" />
-    <Content Include="Files\lib\bootstrap\dist\css\bootstrap.css" />
-    <Content Include="Files\lib\bootstrap\dist\css\bootstrap.css.map" />
-    <Content Include="Files\lib\bootstrap\dist\css\bootstrap.min.css" />
-    <Content Include="Files\lib\bootstrap\dist\css\bootstrap.min.css.map" />
-    <Content Include="Files\lib\bootstrap\dist\js\bootstrap.bundle.js" />
-    <Content Include="Files\lib\bootstrap\dist\js\bootstrap.bundle.js.map" />
-    <Content Include="Files\lib\bootstrap\dist\js\bootstrap.bundle.min.js" />
-    <Content Include="Files\lib\bootstrap\dist\js\bootstrap.bundle.min.js.map" />
-    <Content Include="Files\lib\bootstrap\dist\js\bootstrap.js" />
-    <Content Include="Files\lib\bootstrap\dist\js\bootstrap.js.map" />
-    <Content Include="Files\lib\bootstrap\dist\js\bootstrap.min.js" />
-    <Content Include="Files\lib\bootstrap\dist\js\bootstrap.min.js.map" />
-    <Content Include="Files\lib\jquery-validation\dist\additional-methods.js" />
-    <Content Include="Files\lib\jquery-validation\dist\additional-methods.min.js" />
-    <Content Include="Files\lib\jquery-validation\dist\jquery.validate.js" />
-    <Content Include="Files\lib\jquery-validation\dist\jquery.validate.min.js" />
-    <Content Include="Files\lib\jquery-validation\LICENSE.md" />
-    <Content Include="Files\lib\jquery\dist\core.js" />
-    <Content Include="Files\lib\jquery\dist\jquery.js" />
-    <Content Include="Files\lib\jquery\dist\jquery.min.js" />
-    <Content Include="Files\lib\jquery\dist\jquery.min.map" />
-    <Content Include="Files\lib\jquery\dist\jquery.slim.js" />
-    <Content Include="Files\lib\jquery\dist\jquery.slim.min.js" />
-    <Content Include="Files\lib\jquery\dist\jquery.slim.min.map" />
+    <None Remove="wwwroot\indy.dll" />
+    <None Remove="wwwroot\libeay32md.dll" />
+    <None Remove="wwwroot\libsodium.dll" />
+    <None Remove="wwwroot\libzmq.dll" />
+    <None Remove="wwwroot\ssleay32md.dll" />
   </ItemGroup>
 
   <ItemGroup>
@@ -70,19 +28,19 @@
   </ItemGroup>
 
   <ItemGroup>
-    <EmbeddedResource Include="Files\lib\indy.dll">
+    <EmbeddedResource Include="wwwroot\lib\indy.dll">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </EmbeddedResource>
-    <EmbeddedResource Include="Files\lib\libeay32md.dll">
+    <EmbeddedResource Include="wwwroot\lib\libeay32md.dll">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </EmbeddedResource>
-    <EmbeddedResource Include="Files\lib\libsodium.dll">
+    <EmbeddedResource Include="wwwroot\lib\libsodium.dll">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </EmbeddedResource>
-    <EmbeddedResource Include="Files\lib\libzmq.dll">
+    <EmbeddedResource Include="wwwroot\lib\libzmq.dll">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </EmbeddedResource>
-    <EmbeddedResource Include="Files\lib\ssleay32md.dll">
+    <EmbeddedResource Include="wwwroot\lib\ssleay32md.dll">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </EmbeddedResource>
   </ItemGroup>
@@ -103,6 +61,57 @@
   </ItemGroup>
 
   <ItemGroup>
-    <Folder Include="Files\IndyLib\" />
+    <Folder Include="wwwroot\IndyLib\" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <None Include="wwwroot\css\site.css" />
+    <None Include="wwwroot\css\site.min.css" />
+    <None Include="wwwroot\favicon.ico" />
+    <None Include="wwwroot\images\banner1.svg" />
+    <None Include="wwwroot\images\banner2.svg" />
+    <None Include="wwwroot\images\banner3.svg" />
+    <None Include="wwwroot\images\banner4.svg" />
+    <None Include="wwwroot\images\profile.png" />
+    <None Include="wwwroot\js\site.js" />
+    <None Include="wwwroot\js\site.min.js" />
+    <None Include="wwwroot\lib\bootstrap\dist\css\bootstrap-grid.css" />
+    <None Include="wwwroot\lib\bootstrap\dist\css\bootstrap-grid.css.map" />
+    <None Include="wwwroot\lib\bootstrap\dist\css\bootstrap-grid.min.css" />
+    <None Include="wwwroot\lib\bootstrap\dist\css\bootstrap-grid.min.css.map" />
+    <None Include="wwwroot\lib\bootstrap\dist\css\bootstrap-reboot.css" />
+    <None Include="wwwroot\lib\bootstrap\dist\css\bootstrap-reboot.css.map" />
+    <None Include="wwwroot\lib\bootstrap\dist\css\bootstrap-reboot.min.css" />
+    <None Include="wwwroot\lib\bootstrap\dist\css\bootstrap-reboot.min.css.map" />
+    <None Include="wwwroot\lib\bootstrap\dist\css\bootstrap.css" />
+    <None Include="wwwroot\lib\bootstrap\dist\css\bootstrap.css.map" />
+    <None Include="wwwroot\lib\bootstrap\dist\css\bootstrap.min.css" />
+    <None Include="wwwroot\lib\bootstrap\dist\css\bootstrap.min.css.map" />
+    <None Include="wwwroot\lib\bootstrap\dist\js\bootstrap.bundle.js" />
+    <None Include="wwwroot\lib\bootstrap\dist\js\bootstrap.bundle.js.map" />
+    <None Include="wwwroot\lib\bootstrap\dist\js\bootstrap.bundle.min.js" />
+    <None Include="wwwroot\lib\bootstrap\dist\js\bootstrap.bundle.min.js.map" />
+    <None Include="wwwroot\lib\bootstrap\dist\js\bootstrap.js" />
+    <None Include="wwwroot\lib\bootstrap\dist\js\bootstrap.js.map" />
+    <None Include="wwwroot\lib\bootstrap\dist\js\bootstrap.min.js" />
+    <None Include="wwwroot\lib\bootstrap\dist\js\bootstrap.min.js.map" />
+    <None Include="wwwroot\lib\indy.dll" />
+    <None Include="wwwroot\lib\indy.dll.lib" />
+    <None Include="wwwroot\lib\jquery-validation\dist\additional-methods.js" />
+    <None Include="wwwroot\lib\jquery-validation\dist\additional-methods.min.js" />
+    <None Include="wwwroot\lib\jquery-validation\dist\jquery.validate.js" />
+    <None Include="wwwroot\lib\jquery-validation\dist\jquery.validate.min.js" />
+    <None Include="wwwroot\lib\jquery-validation\LICENSE.md" />
+    <None Include="wwwroot\lib\jquery\dist\core.js" />
+    <None Include="wwwroot\lib\jquery\dist\jquery.js" />
+    <None Include="wwwroot\lib\jquery\dist\jquery.min.js" />
+    <None Include="wwwroot\lib\jquery\dist\jquery.min.map" />
+    <None Include="wwwroot\lib\jquery\dist\jquery.slim.js" />
+    <None Include="wwwroot\lib\jquery\dist\jquery.slim.min.js" />
+    <None Include="wwwroot\lib\jquery\dist\jquery.slim.min.map" />
+    <None Include="wwwroot\lib\libeay32md.dll" />
+    <None Include="wwwroot\lib\libsodium.dll" />
+    <None Include="wwwroot\lib\libzmq.dll" />
+    <None Include="wwwroot\lib\ssleay32md.dll" />
   </ItemGroup>
 </Project>

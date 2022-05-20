@@ -1,0 +1,25 @@
+version: '3'
+services:
+  indy-pool:
+    image: blcochain-discovery_indy-pool
+    container_name: indy-pool
+    environment:
+      ALLOW_EMPTY_PASSWORD: "yes"
+    ports:
+      - "9701-9702:9701-9702"
+
+  web-agent-1:
+    image: blcochain-discovery_web-agent-1
+    container_name: web-agent-1
+    environment:
+      - ASPNETCORE_URLS=http://host.docker.internal:5000
+      - ASPNETCORE_ENVIRONMENT=Development
+      - ENDPOINT_HOST=${HOST1:-http://host.docker.internal:5000}
+    ports:
+      - "80"
+      - "5000:5000"
+    depends_on:
+      - "indy-pool"
+    links:
+      - "indy-pool"
+

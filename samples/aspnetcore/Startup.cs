@@ -41,7 +41,7 @@ namespace WebAgent
                 builder.RegisterAgent<SimpleWebAgent>(c =>
                 {
                     c.AgentName = Environment.GetEnvironmentVariable("AGENT_NAME") ?? NameGenerator.GetRandomName();
-                    c.EndpointUri = Environment.GetEnvironmentVariable("ENDPOINT_HOST") ?? Environment.GetEnvironmentVariable("ASPNETCORE_URLS");
+                    c.EndpointUri = Environment.GetEnvironmentVariable("DOCKER_HOST") ?? Environment.GetEnvironmentVariable("ASPNETCORE_URLS");
                     c.WalletConfiguration = new WalletConfiguration { Id = "WebAgentWallet" };
                     c.WalletCredentials = new WalletCredentials { Key = "MyWalletKey" };
                     c.GenesisFilename = Path.GetFullPath("pool_genesis.txn");

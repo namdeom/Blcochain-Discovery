@@ -1,0 +1,24 @@
+version: '3'
+services:
+  indy-pool:
+    image: mydockercrblockchain.azurecr.io/indy-pool:v1
+    container_name: indy-pool
+    ports:
+      - "9701-9709:9701-9709"
+
+  web-agent-1:
+    image: mydockercrblockchain.azurecr.io/web-agent-1:v1
+    container_name: web-agent-1
+    #VVVVIP statement followging ow it will nto work
+    extra_hosts:
+      - "host.docker.internal:host-gateway"
+    environment:
+      - ASPNETCORE_URLS=http://host.docker.internal:80
+      - ASPNETCORE_ENVIRONMENT=Development
+      - ENDPOINT_HOST=http://host.docker.internal:80
+    ports:
+      - "80:80"
+    depends_on:
+      - "indy-pool"
+    links:
+      - "indy-pool"
