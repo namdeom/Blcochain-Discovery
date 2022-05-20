@@ -1,0 +1,19 @@
+apiVersion : apps/v1
+kind: Deployment
+metadata:
+  name: "blockchainpocaks-34f7"
+spec:
+  replicas: 2
+  selector:
+    matchLabels:
+      app: "blockchainpocaks-34f7"
+  template:
+    metadata:
+      labels:
+        app: "blockchainpocaks-34f7"
+    spec:
+      containers:
+        - name: "blockchainpocaks-34f7"
+          image: "blockchainpocaksregistry.azurecr.io/blockchainpocaks"
+          ports:
+          - containerPort: 80
